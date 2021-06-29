@@ -17,21 +17,35 @@ class HeroService: ObservableObject {
     
     var heroSubscription: AnyCancellable?
     
+    let didChange = PassthroughSubject<HeroService,Never>()
+
+    // required to conform to protocol 'ObservableObject'
+    let willChange = PassthroughSubject<HeroService,Never>()
+
+    
     init() {
         getHeroes()
     }
     
     func getHeroes() {
-        guard let url = URL(string: URL_Hero) else { return }
+        guard let url = URL(string: URL_HeroState) else { return }
 
         heroSubscription = NetworkingManager.download(url: url)
             .decode(type: [HeroModel].self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] (returnedCoins) in
                 self?.allHeroes = returnedCoins
+                self?.isHeroReady = true
                 self?.heroSubscription?.cancel()
+                print(self?.allHeroes)
             })
     }
     
+    var isHeroReady = false {
+        didSet {
+              didChange.send(self)
+        }
+    }
+
 }
 

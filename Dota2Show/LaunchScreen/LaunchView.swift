@@ -9,7 +9,10 @@ import SwiftUI
 
 struct LaunchView: View {
     
-    @State private var loadingText: [String] = "Loading your portfolio...".map { String($0) }
+    @EnvironmentObject var heroService: HeroService
+    @EnvironmentObject var vm: HomeViewModel
+    
+    @State private var loadingText: [String] = "正在从OpenDota.com获取数据".map { String($0) }
     @State private var showLoadingText: Bool = false
     private let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     
@@ -47,8 +50,14 @@ struct LaunchView: View {
                 }
                 
             }
-            .offset(y: 90)
+            .offset(y: 120)
         }
+        .background(
+            NavigationLink(
+                destination: HomeView().environmentObject(vm),
+                isActive: $showLaunchView,
+                label: { EmptyView() })
+        )
         .onAppear {
             showLoadingText.toggle()
         }
@@ -59,8 +68,12 @@ struct LaunchView: View {
                 if counter == lastIndex {
                     counter = 0
                     loops += 1
-                    if loops >= 2 {
-                        showLaunchView = false
+                    if loops >= 4 || vm.heroService.isHeroReady {
+                        print("loops is \(loops)")
+                        print("isReady is \(vm.heroService.isHeroReady)")
+                        showLaunchView = true
+                        // 停止定时器
+                        timer.upstream.connect().cancel()
                     }
                 } else {
                     counter += 1

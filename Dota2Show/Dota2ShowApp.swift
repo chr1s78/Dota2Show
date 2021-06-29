@@ -11,7 +11,7 @@ import SwiftUI
 struct Dota2ShowApp: App{
     
     @StateObject private var vm = HomeViewModel()
-    @State private var showLaunchView: Bool = true
+    @State private var showLaunchView: Bool = false
     
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor(Color.black)]
@@ -23,18 +23,25 @@ struct Dota2ShowApp: App{
     var body: some Scene {
         WindowGroup {
             ZStack {
-                NavigationView {
-                    HomeView()
-                        .navigationBarHidden(true)
-                }
-                .navigationViewStyle(StackNavigationViewStyle())
-                .environmentObject(vm)
+//                NavigationView {
+//                    HomeView()
+//                        .navigationBarHidden(true)
+//                }
+//                .navigationViewStyle(StackNavigationViewStyle())
+//                .environmentObject(vm)
 
                 ZStack {
-                    if showLaunchView {
-                        LaunchView(showLaunchView: $showLaunchView)
-                            .transition(.move(edge: .leading))
+                    NavigationView {
+                        if !showLaunchView {
+                            LaunchView(showLaunchView: $showLaunchView)
+                                .navigationBarTitle("", displayMode: .inline)
+                                .navigationBarHidden(true)
+                                .navigationBarBackButtonHidden(true)
+                                .environmentObject(vm)
+                                .transition(.move(edge: .leading))
+                        }
                     }
+                    .navigationViewStyle(StackNavigationViewStyle())
                 }
                 .zIndex(2.0)
             }

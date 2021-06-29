@@ -9,8 +9,9 @@ import Foundation
 
 let URLHeader = "https://steamcdn-a.akamaihd.net"
 let URL_Hero = "https://api.opendota.com/api/heroes"
+let URL_HeroState = "https://api.opendota.com/api/heroStats"
 
-struct HeroModel: Codable {
+struct HeroModel: Identifiable, Codable {
     let id: Int?
     let name, localizedName, img, icon: String?
     let proWin, proPick, heroID, proBan: Int?

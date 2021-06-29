@@ -10,10 +10,25 @@ import SwiftUI
 
 class HomeViewModel: ObservableObject {
     
-    @Published var heroService = HeroService()
+    @ObservedObject var heroService = HeroService()
+ //   @ObservedObject var allHeroes: [HeroModel]
     
     init() {
         heroService.getHeroes()
     }
     
+    func isHeroesAvailble() -> Bool {
+        print(heroService.allHeroes.count)
+        return (heroService.allHeroes.count > 0) ? true : false
+    }
+    
+
+    func getHeroChineseName(name: String) -> String {
+        return ""
+    }
+    
+    func getHeroImageURL(image: String) -> URL? {
+        guard let url = URL(string: image) else { return nil }
+        return url
+    }
 }
