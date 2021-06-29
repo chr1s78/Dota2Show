@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAC6FE22268A2E240040EB10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC6FE21268A2E240040EB10 /* LaunchScreen.storyboard */; };
+		AAC6FE24268A30DB0040EB10 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6FE23268A30DB0040EB10 /* LaunchView.swift */; };
+		AAC6FE27268A347C0040EB10 /* Maghrib-MVZpx.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC6FE26268A347C0040EB10 /* Maghrib-MVZpx.ttf */; };
+		AAC6FE2A268A39540040EB10 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6FE29268A39540040EB10 /* NetworkManager.swift */; };
+		AAC6FE2D268A39AC0040EB10 /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6FE2C268A39AC0040EB10 /* HeroService.swift */; };
+		AAC6FE30268A39FD0040EB10 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6FE2F268A39FD0040EB10 /* HeroModel.swift */; };
+		AAC6FE33268A3BEA0040EB10 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6FE32268A3BEA0040EB10 /* HomeViewModel.swift */; };
+		AAC6FE36268A469A0040EB10 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6FE35268A469A0040EB10 /* Environment.swift */; };
+		AAC6FE3A268ACA860040EB10 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6FE39268ACA860040EB10 /* HomeView.swift */; };
 		AAE0BF21268862760088903D /* Dota2ShowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0BF20268862760088903D /* Dota2ShowApp.swift */; };
 		AAE0BF23268862760088903D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0BF22268862760088903D /* ContentView.swift */; };
 		AAE0BF252688627A0088903D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE0BF242688627A0088903D /* Assets.xcassets */; };
@@ -14,6 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AAC6FE21268A2E240040EB10 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AAC6FE23268A30DB0040EB10 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		AAC6FE26268A347C0040EB10 /* Maghrib-MVZpx.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Maghrib-MVZpx.ttf"; sourceTree = "<group>"; };
+		AAC6FE29268A39540040EB10 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AAC6FE2C268A39AC0040EB10 /* HeroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroService.swift; sourceTree = "<group>"; };
+		AAC6FE2F268A39FD0040EB10 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		AAC6FE32268A3BEA0040EB10 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AAC6FE35268A469A0040EB10 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		AAC6FE39268ACA860040EB10 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AAE0BF1D268862760088903D /* Dota2Show.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2Show.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE0BF20268862760088903D /* Dota2ShowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2ShowApp.swift; sourceTree = "<group>"; };
 		AAE0BF22268862760088903D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +51,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AAC6FE20268A2E0E0040EB10 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AAC6FE21268A2E240040EB10 /* LaunchScreen.storyboard */,
+				AAC6FE23268A30DB0040EB10 /* LaunchView.swift */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		AAC6FE25268A346B0040EB10 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				AAC6FE26268A347C0040EB10 /* Maghrib-MVZpx.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		AAC6FE28268A393C0040EB10 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AAC6FE29268A39540040EB10 /* NetworkManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AAC6FE2B268A398F0040EB10 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AAC6FE2C268A39AC0040EB10 /* HeroService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AAC6FE2E268A39EC0040EB10 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AAC6FE2F268A39FD0040EB10 /* HeroModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AAC6FE31268A3BCF0040EB10 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AAC6FE32268A3BEA0040EB10 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AAC6FE34268A468C0040EB10 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				AAC6FE35268A469A0040EB10 /* Environment.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		AAC6FE37268ACA700040EB10 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AAC6FE38268ACA770040EB10 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AAC6FE38268ACA770040EB10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAC6FE39268ACA860040EB10 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AAE0BF14268862760088903D = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +144,14 @@
 			isa = PBXGroup;
 			children = (
 				AAE0BF20268862760088903D /* Dota2ShowApp.swift */,
+				AAC6FE37268ACA700040EB10 /* Home */,
+				AAC6FE34268A468C0040EB10 /* extension */,
+				AAC6FE2E268A39EC0040EB10 /* Models */,
+				AAC6FE31268A3BCF0040EB10 /* ViewModels */,
+				AAC6FE2B268A398F0040EB10 /* Service */,
+				AAC6FE28268A393C0040EB10 /* Utilities */,
+				AAC6FE25268A346B0040EB10 /* Font */,
+				AAC6FE20268A2E0E0040EB10 /* LaunchScreen */,
 				AAE0BF22268862760088903D /* ContentView.swift */,
 				AAE0BF242688627A0088903D /* Assets.xcassets */,
 				AAE0BF292688627A0088903D /* Info.plist */,
@@ -126,6 +225,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC6FE22268A2E240040EB10 /* LaunchScreen.storyboard in Resources */,
+				AAC6FE27268A347C0040EB10 /* Maghrib-MVZpx.ttf in Resources */,
 				AAE0BF282688627A0088903D /* Preview Assets.xcassets in Resources */,
 				AAE0BF252688627A0088903D /* Assets.xcassets in Resources */,
 			);
@@ -138,8 +239,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC6FE3A268ACA860040EB10 /* HomeView.swift in Sources */,
+				AAC6FE2A268A39540040EB10 /* NetworkManager.swift in Sources */,
+				AAC6FE36268A469A0040EB10 /* Environment.swift in Sources */,
+				AAC6FE2D268A39AC0040EB10 /* HeroService.swift in Sources */,
+				AAC6FE33268A3BEA0040EB10 /* HomeViewModel.swift in Sources */,
 				AAE0BF23268862760088903D /* ContentView.swift in Sources */,
+				AAC6FE24268A30DB0040EB10 /* LaunchView.swift in Sources */,
 				AAE0BF21268862760088903D /* Dota2ShowApp.swift in Sources */,
+				AAC6FE30268A39FD0040EB10 /* HeroModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
