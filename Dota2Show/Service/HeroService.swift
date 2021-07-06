@@ -13,6 +13,8 @@ import SwiftUI
 
 class HeroService: ObservableObject {
     
+    static let instance = HeroService()
+    
     @Published var allHeroes: [HeroModel] = []
     
     var heroSubscription: AnyCancellable?
@@ -23,7 +25,7 @@ class HeroService: ObservableObject {
     let willChange = PassthroughSubject<HeroService,Never>()
 
     
-    init() {
+    private init() {
         getHeroes()
     }
     
@@ -37,7 +39,7 @@ class HeroService: ObservableObject {
                 self?.allHeroes = returnedCoins
                 self?.isHeroReady = true
                 self?.heroSubscription?.cancel()
-                print(self?.allHeroes)
+                print(self?.allHeroes as Any)
             })
     }
     

@@ -7,14 +7,26 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 class HomeViewModel: ObservableObject {
     
-    @ObservedObject var heroService = HeroService()
- //   @ObservedObject var allHeroes: [HeroModel]
+ //   @ObservedObject var heroService = HeroService()
+    @Published var allHeroes: [HeroModel] = []
+    var heroService = HeroService.instance
+    
+    var cancellables = Set<AnyCancellable>()
     
     init() {
-        heroService.getHeroes()
+       addSubscribers()
+    }
+    
+    func addSubscribers() {
+        heroService.$allHeroes
+            .sink { [weak self] (returnedModels) in
+                self?.allHeroes = returnedModels
+            }
+            .store(in: &cancellables)
     }
     
     func isHeroesAvailble() -> Bool {

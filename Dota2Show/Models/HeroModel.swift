@@ -48,4 +48,5 @@ struct HeroModel: Identifiable, Codable {
         case turboPick = "turbo_pick"
         case turboWin = "turbo_win"
     }
+    
 }

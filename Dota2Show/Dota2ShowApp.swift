@@ -23,12 +23,6 @@ struct Dota2ShowApp: App{
     var body: some Scene {
         WindowGroup {
             ZStack {
-//                NavigationView {
-//                    HomeView()
-//                        .navigationBarHidden(true)
-//                }
-//                .navigationViewStyle(StackNavigationViewStyle())
-//                .environmentObject(vm)
 
                 ZStack {
                     NavigationView {

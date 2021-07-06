@@ -21,70 +21,82 @@ struct LaunchView: View {
     @Binding var showLaunchView: Bool
     
     var body: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
-            
-            VStack {
-                Image("dota2")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                
-                Text("Dota2 Assistant")
-                    .font(.custom("Maghrib", size: 40))
-                    .foregroundColor(.red)
-            }
-            
+        
+        NavigationView {
             ZStack {
-                if showLoadingText {
-                    HStack(spacing: 0) {
-                        ForEach(loadingText.indices) { index in
-                            Text(loadingText[index])
-                                .font(.headline)
-                                .fontWeight(.heavy)
-                                .foregroundColor(Color.red)
-                                .offset(y: counter == index ? -5 : 0)
+                Color.black
+                    .ignoresSafeArea()
+                
+                VStack {
+                    Image("dota2")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                    
+                    Text("Dota2 Assistant")
+                        .font(.custom("Maghrib", size: 40))
+                        .foregroundColor(.red)
+                }
+                
+                ZStack {
+                    if showLoadingText {
+                        HStack(spacing: 0) {
+                            ForEach(loadingText.indices) { index in
+                                Text(loadingText[index])
+                                    .font(.headline)
+                                    .fontWeight(.heavy)
+                                    .foregroundColor(Color.red)
+                                    .offset(y: counter == index ? -5 : 0)
+                            }
                         }
+                        .transition(AnyTransition.scale.animation(.easeIn))
                     }
-                    .transition(AnyTransition.scale.animation(.easeIn))
+                    
                 }
-                
+                .offset(y: 120)
             }
-            .offset(y: 120)
-        }
-        .background(
-            NavigationLink(
-                destination: HomeView().environmentObject(vm),
-                isActive: $showLaunchView,
-                label: { EmptyView() })
-        )
-        .onAppear {
-            showLoadingText.toggle()
-        }
-        .onReceive(timer, perform: { _ in
-            withAnimation(.spring()) {
-                
-                let lastIndex = loadingText.count - 1
-                if counter == lastIndex {
-                    counter = 0
-                    loops += 1
-                    if loops >= 4 || vm.heroService.isHeroReady {
-                        print("loops is \(loops)")
-                        print("isReady is \(vm.heroService.isHeroReady)")
-                        showLaunchView = true
-                        // 停止定时器
-                        timer.upstream.connect().cancel()
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
+            .background(
+                NavigationLink(
+                    destination: HomeView().environmentObject(vm).navigationTitle(" ")
+                        .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(true),
+                    isActive: $showLaunchView,
+                    label: { EmptyView() })
+            )
+            .onAppear {
+                showLoadingText.toggle()
+            }
+            .onReceive(timer, perform: { _ in
+                withAnimation(.spring()) {
+                    
+                    let lastIndex = loadingText.count - 1
+                    if counter == lastIndex {
+                        counter = 0
+                        loops += 1
+                        if loops >= 4 || vm.heroService.isHeroReady {
+                            print("loops is \(loops)")
+                            print("isReady is \(vm.heroService.isHeroReady)")
+                            showLaunchView = true
+                            // 停止定时器
+                            timer.upstream.connect().cancel()
+                        }
+                    } else {
+                        counter += 1
                     }
-                } else {
-                    counter += 1
                 }
-            }
         })
+        }
     }
 }
 
 struct LaunchView_Previews: PreviewProvider {
+  
+    @State var showLaunchView: Bool = false
     static var previews: some View {
-        LaunchView(showLaunchView: .constant(true))
+        LaunchView(showLaunchView: .constant(false))
+            .environmentObject(HomeViewModel())
+            
     }
 }

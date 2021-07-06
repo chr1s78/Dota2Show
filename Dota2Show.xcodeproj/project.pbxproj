@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAB5DC8226942C640088B96E /* HeroSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5DC8126942C640088B96E /* HeroSheetView.swift */; };
+		AAB5DC8426943F2D0088B96E /* testview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5DC8326943F2D0088B96E /* testview.swift */; };
 		AAC6FE22268A2E240040EB10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC6FE21268A2E240040EB10 /* LaunchScreen.storyboard */; };
 		AAC6FE24268A30DB0040EB10 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6FE23268A30DB0040EB10 /* LaunchView.swift */; };
 		AAC6FE27268A347C0040EB10 /* Maghrib-MVZpx.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC6FE26268A347C0040EB10 /* Maghrib-MVZpx.ttf */; };
@@ -17,13 +19,22 @@
 		AAC6FE36268A469A0040EB10 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6FE35268A469A0040EB10 /* Environment.swift */; };
 		AAC6FE3A268ACA860040EB10 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6FE39268ACA860040EB10 /* HomeView.swift */; };
 		AAC6FE3D268B1E590040EB10 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AAC6FE3C268B1E590040EB10 /* SDWebImageSwiftUI */; };
+		AAC6FE5D268B74F10040EB10 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AAC6FE5C268B74F10040EB10 /* Lottie */; };
+		AAC6FE60268B75AB0040EB10 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6FE5F268B75AB0040EB10 /* LottieView.swift */; };
+		AAC6FE62268B75EE0040EB10 /* magic.json in Resources */ = {isa = PBXBuildFile; fileRef = AAC6FE61268B75EE0040EB10 /* magic.json */; };
+		AAC6FE64268B774D0040EB10 /* LottieTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6FE63268B774D0040EB10 /* LottieTestView.swift */; };
+		AAD74DCA268CAADF00DF4E13 /* HomePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD74DC9268CAADF00DF4E13 /* HomePreview.swift */; };
+		AAD74DCC268CC19600DF4E13 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD74DCB268CC19600DF4E13 /* BlurView.swift */; };
 		AAE0BF21268862760088903D /* Dota2ShowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0BF20268862760088903D /* Dota2ShowApp.swift */; };
 		AAE0BF23268862760088903D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0BF22268862760088903D /* ContentView.swift */; };
 		AAE0BF252688627A0088903D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE0BF242688627A0088903D /* Assets.xcassets */; };
 		AAE0BF282688627A0088903D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE0BF272688627A0088903D /* Preview Assets.xcassets */; };
+		AAF1E89426946C42003FA1CE /* sheet1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF1E89326946C42003FA1CE /* sheet1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AAB5DC8126942C640088B96E /* HeroSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSheetView.swift; sourceTree = "<group>"; };
+		AAB5DC8326943F2D0088B96E /* testview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testview.swift; sourceTree = "<group>"; };
 		AAC6FE21268A2E240040EB10 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAC6FE23268A30DB0040EB10 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		AAC6FE26268A347C0040EB10 /* Maghrib-MVZpx.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Maghrib-MVZpx.ttf"; sourceTree = "<group>"; };
@@ -33,12 +44,18 @@
 		AAC6FE32268A3BEA0040EB10 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AAC6FE35268A469A0040EB10 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		AAC6FE39268ACA860040EB10 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AAC6FE5F268B75AB0040EB10 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		AAC6FE61268B75EE0040EB10 /* magic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = magic.json; sourceTree = "<group>"; };
+		AAC6FE63268B774D0040EB10 /* LottieTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieTestView.swift; sourceTree = "<group>"; };
+		AAD74DC9268CAADF00DF4E13 /* HomePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePreview.swift; sourceTree = "<group>"; };
+		AAD74DCB268CC19600DF4E13 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		AAE0BF1D268862760088903D /* Dota2Show.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2Show.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE0BF20268862760088903D /* Dota2ShowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2ShowApp.swift; sourceTree = "<group>"; };
 		AAE0BF22268862760088903D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AAE0BF242688627A0088903D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAE0BF272688627A0088903D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AAE0BF292688627A0088903D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF1E89326946C42003FA1CE /* sheet1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sheet1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,12 +64,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC6FE3D268B1E590040EB10 /* SDWebImageSwiftUI in Frameworks */,
+				AAC6FE5D268B74F10040EB10 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AAB5DC8026942C4B0088B96E /* HeroSheetView */ = {
+			isa = PBXGroup;
+			children = (
+				AAB5DC8126942C640088B96E /* HeroSheetView.swift */,
+			);
+			path = HeroSheetView;
+			sourceTree = "<group>";
+		};
 		AAC6FE20268A2E0E0040EB10 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,9 +147,33 @@
 		AAC6FE38268ACA770040EB10 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AAB5DC8026942C4B0088B96E /* HeroSheetView */,
+				AAD74DC8268CAAC900DF4E13 /* Custom */,
+				AAC6FE5E268B759D0040EB10 /* Lottie */,
 				AAC6FE39268ACA860040EB10 /* HomeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AAC6FE5E268B759D0040EB10 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				AAC6FE61268B75EE0040EB10 /* magic.json */,
+				AAC6FE5F268B75AB0040EB10 /* LottieView.swift */,
+				AAC6FE63268B774D0040EB10 /* LottieTestView.swift */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		AAD74DC8268CAAC900DF4E13 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				AAD74DC9268CAADF00DF4E13 /* HomePreview.swift */,
+				AAD74DCB268CC19600DF4E13 /* BlurView.swift */,
+				AAB5DC8326943F2D0088B96E /* testview.swift */,
+				AAF1E89326946C42003FA1CE /* sheet1.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		AAE0BF14268862760088903D = {
@@ -188,6 +238,7 @@
 			name = Dota2Show;
 			packageProductDependencies = (
 				AAC6FE3C268B1E590040EB10 /* SDWebImageSwiftUI */,
+				AAC6FE5C268B74F10040EB10 /* Lottie */,
 			);
 			productName = Dota2Show;
 			productReference = AAE0BF1D268862760088903D /* Dota2Show.app */;
@@ -218,6 +269,7 @@
 			mainGroup = AAE0BF14268862760088903D;
 			packageReferences = (
 				AAC6FE3B268B1E590040EB10 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				AAC6FE5B268B74F10040EB10 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = AAE0BF1E268862760088903D /* Products */;
 			projectDirPath = "";
@@ -234,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC6FE22268A2E240040EB10 /* LaunchScreen.storyboard in Resources */,
+				AAC6FE62268B75EE0040EB10 /* magic.json in Resources */,
 				AAC6FE27268A347C0040EB10 /* Maghrib-MVZpx.ttf in Resources */,
 				AAE0BF282688627A0088903D /* Preview Assets.xcassets in Resources */,
 				AAE0BF252688627A0088903D /* Assets.xcassets in Resources */,
@@ -247,15 +300,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD74DCC268CC19600DF4E13 /* BlurView.swift in Sources */,
+				AAF1E89426946C42003FA1CE /* sheet1.swift in Sources */,
 				AAC6FE3A268ACA860040EB10 /* HomeView.swift in Sources */,
 				AAC6FE2A268A39540040EB10 /* NetworkManager.swift in Sources */,
 				AAC6FE36268A469A0040EB10 /* Environment.swift in Sources */,
+				AAB5DC8426943F2D0088B96E /* testview.swift in Sources */,
+				AAD74DCA268CAADF00DF4E13 /* HomePreview.swift in Sources */,
 				AAC6FE2D268A39AC0040EB10 /* HeroService.swift in Sources */,
 				AAC6FE33268A3BEA0040EB10 /* HomeViewModel.swift in Sources */,
 				AAE0BF23268862760088903D /* ContentView.swift in Sources */,
 				AAC6FE24268A30DB0040EB10 /* LaunchView.swift in Sources */,
+				AAC6FE60268B75AB0040EB10 /* LottieView.swift in Sources */,
+				AAB5DC8226942C640088B96E /* HeroSheetView.swift in Sources */,
 				AAE0BF21268862760088903D /* Dota2ShowApp.swift in Sources */,
 				AAC6FE30268A39FD0040EB10 /* HeroModel.swift in Sources */,
+				AAC6FE64268B774D0040EB10 /* LottieTestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +514,14 @@
 				minimumVersion = 2.0.2;
 			};
 		};
+		AAC6FE5B268B74F10040EB10 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/chr1s78/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -461,6 +529,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AAC6FE3B268B1E590040EB10 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		AAC6FE5C268B74F10040EB10 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAC6FE5B268B74F10040EB10 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

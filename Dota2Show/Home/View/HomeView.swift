@@ -13,33 +13,31 @@ let coloredNavAppearance = UINavigationBarAppearance()
 struct HomeView: View {
     
     @EnvironmentObject private var vm: HomeViewModel
-    @Environment(\.colorScheme) var colorScheme
-    @State var isNavigationBarHidden: Bool = true
+    @State var show: Bool = false
     
     init() {
-        coloredNavAppearance.configureWithOpaqueBackground()
-        coloredNavAppearance.backgroundColor = colorScheme == .dark ? .black : .white
-        coloredNavAppearance.titleTextAttributes = [.foregroundColor: colorScheme == .dark ? UIColor.white : UIColor.black]
-        coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: colorScheme == .dark ? UIColor.white : UIColor.black]
-        
-        UINavigationBar.appearance().standardAppearance = coloredNavAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
-        
     }
     
     var body: some View {
        
-        NavigationView {
-            ScrollView {
+        ZStack {
+            
+            LottieView(filename: "magic")
+                .background(
+                    Image("jugg")
+                        .resizable()
+                        .opacity(0.8)
+                )
+                .edgesIgnoringSafeArea(.all)
+
+            
+            
+            ScrollView(showsIndicators: false) {
                 HeroCardRow().environmentObject(vm)
             }
-            .navigationBarTitle("", displayMode: .inline)
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
-        }
-        
-        .onAppear {
-            self.isNavigationBarHidden = true
+            .frame(width: UIScreen.main.bounds.width)
+            .offset(x: 30)
+            
         }
     }
 }
@@ -52,30 +50,53 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 struct HeroCardRow: View {
+    
     @EnvironmentObject private var vm: HomeViewModel
+    @State var selectHero: HeroModel? = nil
+  // @State var isSheet: Bool = false
+    
+    /// 计算ScrollView中image的缩放系数
+    func getParaCurveScale(currentY: CGFloat) -> CGFloat {
+
+        if currentY == 0.4 {
+            return 1.1
+        }
+        else {
+            return CGFloat(currentY <= 0.4 ? currentY*0.5 + 0.8 : 1.2 - currentY*0.5)
+        }
+    }
     
     var body: some View {
-        VStack(spacing: -50.0) {
-            ForEach(vm.heroService.allHeroes) { hero in
+        
+        VStack(spacing: -60.0) {
+            
+            ForEach(vm.allHeroes) { hero in
+                //ForEach(0..<20) { hero in
                 WebImage(url: URL(string: URLHeader + hero.img!))
+                    // Image("axe_full")
                     .resizable()
-                    .frame(width: 300, height: 160)
-                    .clipShape(RoundedRectangle(cornerRadius: 15.0, style: .continuous))
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 240, height: 140)
+                    .clipShape(RoundedRectangle(cornerRadius: 17.0))
                     .rotation3DEffect(
-                        .radians(.pi / 9),
-                        axis: (x: -1.0, y: 0.0, z: 0.0),
-                        anchor: .top,
+                        Angle(degrees: 40),
+                        axis: (x: 1.0, y: -1.0, z: 0),
+                        anchor: .center,
                         perspective: 1
                     )
-                    .scaleEffect(1)
-                    .offset(y: 10)
                     .zIndex(2)
+                    .shadow(color: Color.black.opacity(0.8), radius: 20, x: 0, y: 10)
                     .opacity(1)
-                    .shadow(radius: 5)
+                    .scaleEffect(0.9)
                     .onTapGesture {
-                        //   self.selectCard = mode
+                        self.selectHero = hero
+                        print("hero: \(String(describing: self.selectHero))")
                     }
             }
         }
+        .frame(width: 500)
+        .sheet(item: self.$selectHero, content: { heros in
+            HeroSheetView(hero: heros)
+        })
     }
 }

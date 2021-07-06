@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-func opera<T: Numeric>(num1: T, num2: T, result: (T) -> T) {
-    let value = num1 + num2
-    result(value)
-}
-
 struct ContentView: View {
     
     var loadingText: [String] = "Loading your portfolio...".map { String($0) }
@@ -20,11 +15,6 @@ struct ContentView: View {
     @State private var loops: Int = 0
     
     init() {
-        opera(num1: 10, num2: 12) { value in
-            let re: Int = value as Int
-            print("value is \(re)")
-            return re
-        }
     }
     
     var body: some View {
