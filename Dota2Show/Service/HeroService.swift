@@ -16,17 +16,25 @@ class HeroService: ObservableObject {
     static let instance = HeroService()
     
     @Published var allHeroes: [HeroModel] = []
+    @Published var allHeroesBasic: HeroBasic = []
+    @Published var isHeroReady: Bool = false
+    @Published var isHeroBasicReady: Bool = false
+    @Published var isReceiveAllReady: Bool = false
     
     var heroSubscription: AnyCancellable?
+    var HeroBasicSubscription: AnyCancellable?
+    var receiveSubscription: AnyCancellable?
     
     let didChange = PassthroughSubject<HeroService,Never>()
-
-    // required to conform to protocol 'ObservableObject'
     let willChange = PassthroughSubject<HeroService,Never>()
 
-    
     private init() {
         getHeroes()
+        getHeroesBasic()
+        
+        receiveSubscription = isReceiveComplete
+            .receive(on: RunLoop.main)
+            .assign(to: \.isReceiveAllReady, on: self)
     }
     
     func getHeroes() {
@@ -39,14 +47,39 @@ class HeroService: ObservableObject {
                 self?.allHeroes = returnedCoins
                 self?.isHeroReady = true
                 self?.heroSubscription?.cancel()
-                print(self?.allHeroes as Any)
+                print("isHeroReady : " + (self?.isHeroReady.description)!)
+                
+             //   print(self?.allHeroes as Any)
             })
     }
     
-    var isHeroReady = false {
-        didSet {
-              didChange.send(self)
-        }
+    func getHeroesBasic() {
+        guard let url = URL(string: URL_HeroBasic) else { return }
+
+        HeroBasicSubscription = NetworkingManager.download(url: url)
+            .decode(type: HeroBasic.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] (heroes) in
+                self?.allHeroesBasic = heroes
+                self?.isHeroBasicReady = true
+                self?.HeroBasicSubscription?.cancel()
+                print("isHeroBasicReady : " + (self?.isHeroBasicReady.description)!)
+               // print(self?.allHeroesBasic as Any)
+            })
+    }
+    
+    /// 组合两个publisher <isHeroReady: 英雄状态是否接收完成, isHeroBasicReady: 英雄基本信息是否接收完成>
+    private var isReceiveComplete: AnyPublisher<Bool, Never> {
+        Publishers.CombineLatest($isHeroReady, $isHeroBasicReady)
+            .map {
+                if $0 == true && $1 == true {
+                    print(" ****** both true *********")
+                    return true
+                } else {
+                    return false
+                }
+            }
+            .eraseToAnyPublisher()
     }
 
 }

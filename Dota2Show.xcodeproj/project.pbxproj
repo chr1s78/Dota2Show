@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0048E126ABDB2B00DF0C80 /* ScreenShot.mov in Resources */ = {isa = PBXBuildFile; fileRef = AA0048E026ABDB2800DF0C80 /* ScreenShot.mov */; };
+		AA0406FA26973B0F004DA31E /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = AA0406F926973B0F004DA31E /* SwiftUICharts */; };
+		AA4E284126A029FB0061DCF0 /* VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E284026A029FB0061DCF0 /* VStack.swift */; };
+		AA4E284326A02ABB0061DCF0 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E284226A02ABB0061DCF0 /* HeroDetailView.swift */; };
+		AAA2756726A312BB0027D852 /* HeroListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2756626A312BB0027D852 /* HeroListView.swift */; };
+		AAA2756E26A31A930027D852 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2756D26A31A930027D852 /* CustomNavigationView.swift */; };
+		AAA2757026A31AE40027D852 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2756F26A31AE40027D852 /* ListView.swift */; };
+		AAA2757326A323F90027D852 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2757226A323F90027D852 /* ListRowView.swift */; };
+		AAA2757526A346C30027D852 /* HeroBasicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2757426A346C30027D852 /* HeroBasicModel.swift */; };
 		AAB5DC8226942C640088B96E /* HeroSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5DC8126942C640088B96E /* HeroSheetView.swift */; };
 		AAB5DC8426943F2D0088B96E /* testview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5DC8326943F2D0088B96E /* testview.swift */; };
 		AAC6FE22268A2E240040EB10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC6FE21268A2E240040EB10 /* LaunchScreen.storyboard */; };
@@ -33,6 +42,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA0048E026ABDB2800DF0C80 /* ScreenShot.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ScreenShot.mov; sourceTree = "<group>"; };
+		AA4E284026A029FB0061DCF0 /* VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStack.swift; sourceTree = "<group>"; };
+		AA4E284226A02ABB0061DCF0 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
+		AAA2756626A312BB0027D852 /* HeroListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListView.swift; sourceTree = "<group>"; };
+		AAA2756D26A31A930027D852 /* CustomNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
+		AAA2756F26A31AE40027D852 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		AAA2757226A323F90027D852 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		AAA2757426A346C30027D852 /* HeroBasicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroBasicModel.swift; sourceTree = "<group>"; };
 		AAB5DC8126942C640088B96E /* HeroSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSheetView.swift; sourceTree = "<group>"; };
 		AAB5DC8326943F2D0088B96E /* testview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testview.swift; sourceTree = "<group>"; };
 		AAC6FE21268A2E240040EB10 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0406FA26973B0F004DA31E /* SwiftUICharts in Frameworks */,
 				AAC6FE3D268B1E590040EB10 /* SDWebImageSwiftUI in Frameworks */,
 				AAC6FE5D268B74F10040EB10 /* Lottie in Frameworks */,
 			);
@@ -71,10 +89,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA0048DE26ABDACB00DF0C80 /* ResourceLink */ = {
+			isa = PBXGroup;
+			children = (
+				AA0048E026ABDB2800DF0C80 /* ScreenShot.mov */,
+			);
+			path = ResourceLink;
+			sourceTree = "<group>";
+		};
+		AAA2757126A31AF80027D852 /* HeroListView */ = {
+			isa = PBXGroup;
+			children = (
+				AAA2756626A312BB0027D852 /* HeroListView.swift */,
+				AAA2756F26A31AE40027D852 /* ListView.swift */,
+				AAA2757226A323F90027D852 /* ListRowView.swift */,
+				AAA2756D26A31A930027D852 /* CustomNavigationView.swift */,
+			);
+			path = HeroListView;
+			sourceTree = "<group>";
+		};
 		AAB5DC8026942C4B0088B96E /* HeroSheetView */ = {
 			isa = PBXGroup;
 			children = (
 				AAB5DC8126942C640088B96E /* HeroSheetView.swift */,
+				AA4E284226A02ABB0061DCF0 /* HeroDetailView.swift */,
 			);
 			path = HeroSheetView;
 			sourceTree = "<group>";
@@ -116,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				AAC6FE2F268A39FD0040EB10 /* HeroModel.swift */,
+				AAA2757426A346C30027D852 /* HeroBasicModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				AAC6FE35268A469A0040EB10 /* Environment.swift */,
+				AA4E284026A029FB0061DCF0 /* VStack.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -147,6 +187,7 @@
 		AAC6FE38268ACA770040EB10 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AAA2757126A31AF80027D852 /* HeroListView */,
 				AAB5DC8026942C4B0088B96E /* HeroSheetView */,
 				AAD74DC8268CAAC900DF4E13 /* Custom */,
 				AAC6FE5E268B759D0040EB10 /* Lottie */,
@@ -195,6 +236,7 @@
 		AAE0BF1F268862760088903D /* Dota2Show */ = {
 			isa = PBXGroup;
 			children = (
+				AA0048DE26ABDACB00DF0C80 /* ResourceLink */,
 				AAE0BF20268862760088903D /* Dota2ShowApp.swift */,
 				AAC6FE37268ACA700040EB10 /* Home */,
 				AAC6FE34268A468C0040EB10 /* extension */,
@@ -239,6 +281,7 @@
 			packageProductDependencies = (
 				AAC6FE3C268B1E590040EB10 /* SDWebImageSwiftUI */,
 				AAC6FE5C268B74F10040EB10 /* Lottie */,
+				AA0406F926973B0F004DA31E /* SwiftUICharts */,
 			);
 			productName = Dota2Show;
 			productReference = AAE0BF1D268862760088903D /* Dota2Show.app */;
@@ -270,6 +313,7 @@
 			packageReferences = (
 				AAC6FE3B268B1E590040EB10 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				AAC6FE5B268B74F10040EB10 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				AA0406F826973B0F004DA31E /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
 			);
 			productRefGroup = AAE0BF1E268862760088903D /* Products */;
 			projectDirPath = "";
@@ -285,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0048E126ABDB2B00DF0C80 /* ScreenShot.mov in Resources */,
 				AAC6FE22268A2E240040EB10 /* LaunchScreen.storyboard in Resources */,
 				AAC6FE62268B75EE0040EB10 /* magic.json in Resources */,
 				AAC6FE27268A347C0040EB10 /* Maghrib-MVZpx.ttf in Resources */,
@@ -302,9 +347,14 @@
 			files = (
 				AAD74DCC268CC19600DF4E13 /* BlurView.swift in Sources */,
 				AAF1E89426946C42003FA1CE /* sheet1.swift in Sources */,
+				AAA2757526A346C30027D852 /* HeroBasicModel.swift in Sources */,
 				AAC6FE3A268ACA860040EB10 /* HomeView.swift in Sources */,
+				AAA2756726A312BB0027D852 /* HeroListView.swift in Sources */,
+				AA4E284126A029FB0061DCF0 /* VStack.swift in Sources */,
 				AAC6FE2A268A39540040EB10 /* NetworkManager.swift in Sources */,
 				AAC6FE36268A469A0040EB10 /* Environment.swift in Sources */,
+				AAA2757326A323F90027D852 /* ListRowView.swift in Sources */,
+				AAA2756E26A31A930027D852 /* CustomNavigationView.swift in Sources */,
 				AAB5DC8426943F2D0088B96E /* testview.swift in Sources */,
 				AAD74DCA268CAADF00DF4E13 /* HomePreview.swift in Sources */,
 				AAC6FE2D268A39AC0040EB10 /* HeroService.swift in Sources */,
@@ -314,8 +364,10 @@
 				AAC6FE60268B75AB0040EB10 /* LottieView.swift in Sources */,
 				AAB5DC8226942C640088B96E /* HeroSheetView.swift in Sources */,
 				AAE0BF21268862760088903D /* Dota2ShowApp.swift in Sources */,
+				AAA2757026A31AE40027D852 /* ListView.swift in Sources */,
 				AAC6FE30268A39FD0040EB10 /* HeroModel.swift in Sources */,
 				AAC6FE64268B774D0040EB10 /* LottieTestView.swift in Sources */,
+				AA4E284326A02ABB0061DCF0 /* HeroDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +558,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AA0406F826973B0F004DA31E /* XCRemoteSwiftPackageReference "SwiftUICharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/chr1s78/SwiftUICharts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.3;
+			};
+		};
 		AAC6FE3B268B1E590040EB10 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitee.com/chr1s78/SDWebImageSwiftUI.git";
@@ -525,6 +585,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AA0406F926973B0F004DA31E /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA0406F826973B0F004DA31E /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
+			productName = SwiftUICharts;
+		};
 		AAC6FE3C268B1E590040EB10 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AAC6FE3B268B1E590040EB10 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;

@@ -75,7 +75,7 @@ struct LaunchView: View {
                     if counter == lastIndex {
                         counter = 0
                         loops += 1
-                        if loops >= 4 || vm.heroService.isHeroReady {
+                        if loops >= 4 || vm.heroService.isReceiveAllReady {
                             print("loops is \(loops)")
                             print("isReady is \(vm.heroService.isHeroReady)")
                             showLaunchView = true

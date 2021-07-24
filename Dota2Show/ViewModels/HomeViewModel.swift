@@ -13,6 +13,7 @@ class HomeViewModel: ObservableObject {
     
  //   @ObservedObject var heroService = HeroService()
     @Published var allHeroes: [HeroModel] = []
+    @Published var allHeroesBasic: HeroBasic = []
     var heroService = HeroService.instance
     
     var cancellables = Set<AnyCancellable>()
@@ -27,7 +28,14 @@ class HomeViewModel: ObservableObject {
                 self?.allHeroes = returnedModels
             }
             .store(in: &cancellables)
+        
+        heroService.$allHeroesBasic
+            .sink { [weak self] (returnedModels) in
+                self?.allHeroesBasic = returnedModels
+            }
+            .store(in: &cancellables)
     }
+    
     
     func isHeroesAvailble() -> Bool {
         print(heroService.allHeroes.count)

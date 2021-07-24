@@ -11,7 +11,7 @@ let URLHeader = "https://steamcdn-a.akamaihd.net"
 let URL_Hero = "https://api.opendota.com/api/heroes"
 let URL_HeroState = "https://api.opendota.com/api/heroStats"
 
-struct HeroModel: Identifiable, Codable {
+struct HeroModel: Identifiable, Codable, Hashable {
     let id: Int?
     let name, localizedName, img, icon: String?
     let proWin, proPick, heroID, proBan: Int?
@@ -20,6 +20,11 @@ struct HeroModel: Identifiable, Codable {
     let the5_Pick, the5_Win, the6_Pick, the6_Win: Int?
     let the7_Pick, the7_Win, the8_Pick, the8_Win: Int?
     let turboPick, turboWin: Int?
+    var isTap: Bool = false
+    
+    mutating func setTap(stat: Bool) {
+        isTap = stat
+    }
 
     enum CodingKeys: String, CodingKey {
         case id, name
